@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add your other head elements like fonts and icons here -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* --- General Body/Font Setup (for demo) --- */
+        body {
+            /* This is just for the demo. Integrate these variables into your main stylesheet. */
+            --cc-black: #000000;
+            --cc-white: #FFFFFF;
+            --cc-yellow: #FFD200; /* A bold yellow accent, common on CC */
+            --cc-text-grey: #E0E0E0;
+            --font-display: 'Teko', sans-serif; /* Bold, condensed display font */
+            --font-body: 'Roboto', sans-serif;
+            background-color: var(--cc-black);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Section Styling (Inspired by cc.com) --- */
+        .cc-section {
+            padding: 80px 0;
+            border-bottom: 2px solid #222; /* Separator line between sections */
+            color: var(--cc-white);
+        }
+
+        .cc-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: var(--cc-yellow);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* --- WHO WE ARE Section --- */
+        #who-we-are .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        #who-we-are .text-content p {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--cc-text-grey);
+            max-width: 600px; /* Improve readability */
+        }
+
+        #who-we-are .image-content img {
+            border: 4px solid var(--cc-white);
+            filter: grayscale(80%);
+            transition: filter 0.3s ease;
+        }
+        
+        #who-we-are .image-content img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* --- COOPERATION Section --- */
+        #cooperation {
+            background-color: #111; /* Slightly different background */
+        }
+
+        #cooperation p.intro {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--cc-white);
+            max-width: 800px; /* Keep intro text focused */
+            margin-bottom: 40px;
+        }
+
+        #cooperation .cta-button-coop {
+            display: inline-block;
+            background-color: var(--cc-yellow);
+            color: var(--cc-black);
+            padding: 15px 40px;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--cc-yellow);
+        }
+        #cooperation .cta-button-coop:hover {
+            background-color: transparent;
+            color: var(--cc-yellow);
+        }
+
+
+        /* --- CONTACT Section --- */
+        #contact-us .contact-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Align to the left */
+            gap: 20px;
+        }
+        
+        #contact-us .contact-item {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: var(--cc-text-grey);
+        }
+        
+        #contact-us .contact-item strong {
+            font-weight: 900;
+            color: var(--cc-white);
+            margin-right: 10px;
+            display: block; /* Puts label on its own line */
+            margin-bottom: 5px;
+            font-size: 1.4rem;
+        }
+
+        #contact-us .contact-item a {
+            color: var(--cc-yellow);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        #contact-us .contact-item a:hover {
+            border-bottom-color: var(--cc-yellow);
+        }
+
+        .social-links-contact {
+            margin-top: 30px;
+        }
+        
+        .social-links-contact a {
+            color: var(--cc-white);
+            font-size: 2rem;
+            margin-right: 25px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links-contact a:hover {
+            color: var(--cc-yellow);
+            transform: scale(1.1);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Instructions:
+        1. Replace the existing <section id="about">...</section> with this new #who-we-are section.
+        2. Replace the existing <section id="corporate">...</section> with this new #cooperation section.
+        3. Replace the existing <section id="contact">...</section> with this new #contact-us section.
+        4. Integrate the CSS from the <style> block above into your main style.css file.
+    -->
+
+
+    <!-- =================================================== -->
+    <!--                  1. WHO WE ARE                      -->
+    <!-- =================================================== -->
+    <section id="who-we-are" class="cc-section">
+        <div class="container">
+            <h2>WHO WE ARE</h2>
+            <div class="grid">
+                <div class="text-content">
+                    <p>Since 2019, Warsaw Stand-Up has been the unfiltered, unapologetic home of live comedy in the capital. We're not just a stage; we're an institution. A place for raw talent, legendary headliners, and audiences who know a good joke when they hear one.</p>
+                    <p>We built this from the ground up for one reason: to bring you pure, uncut laughter. No fillers, no apologies. This is stand-up as it's meant to be.</p>
+                </div>
+                <div class="image-content">
+                    <!-- Replace with a dynamic, high-energy photo of a comedian on your stage -->
+                    <img src="https://placehold.co/600x450/111/fff?text=RAW+ENERGY" alt="A comedian performing live at Warsaw Stand-Up">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =================================================== -->
+    <!--               2. ABOUT OUR COOPERATION              -->
+    <!-- =================================================== -->
+    <section id="cooperation" class="cc-section">
+        <div class="container">
+            <h2>LET'S WORK TOGETHER</h2>
+            <p class="intro">Your corporate event doesn't have to be... corporate. Ditch the boring PowerPoints and bring in the professionals. We deliver smart, custom comedy shows that make an impact.</p>
+            <div class="corporate-details">
+                <p>We work with businesses to create unforgettable events, team-building sessions, and private parties, offering full programs in both **English and Polish**.</p>
+                <br>
+                <a href="#contact-us" class="cta-button-coop">Plan Your Event</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =================================================== -->
+    <!--                     3. CONTACT                      -->
+    <!-- =================================================== -->
+    <section id="contact-us" class="cc-section">
+        <div class="container">
+            <h2>GET IN TOUCH</h2>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <strong>For Bookings & Corporate Events:</strong>
+                    <a href="mailto:info@warsawstandup.com">info@warsawstandup.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Call Us:</strong>
+                    <a href="tel:+48123456789">+48 123 456 789</a>
+                </div>
+                <div class="social-links-contact">
+                    <a href="https://www.facebook.com/warsawstandup" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/warsaw_standup" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/warsaw-stand-up" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
