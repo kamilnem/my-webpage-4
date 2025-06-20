@@ -64,6 +64,9 @@
             border: 4px solid var(--cc-white);
             filter: grayscale(80%);
             transition: filter 0.3s ease;
+            width: 100%; /* Make image responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Added rounded corners */
         }
         
         #who-we-are .image-content img:hover {
@@ -96,6 +99,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             border: 2px solid var(--cc-yellow);
+            border-radius: 8px; /* Added rounded corners */
         }
         #cooperation .cta-button-coop:hover {
             background-color: transparent;
@@ -138,6 +142,11 @@
             border-bottom-color: var(--cc-yellow);
         }
 
+        /* New style for company details text to make it yellow */
+        #contact-us .company-details-text {
+            color: var(--cc-yellow);
+        }
+
         .social-links-contact {
             margin-top: 30px;
         }
@@ -153,8 +162,6 @@
             color: var(--cc-yellow);
             transform: scale(1.1);
         }
-
-
     </style>
 </head>
 <body>
@@ -169,7 +176,7 @@
 
 
     <!-- =================================================== -->
-    <!--                  1. WHO WE ARE                      -->
+    <!--           1. WHO WE ARE                             -->
     <!-- =================================================== -->
     <section id="who-we-are" class="cc-section">
         <div class="container">
@@ -180,8 +187,8 @@
                     <p>We built this from the ground up for one reason: to bring you pure, uncut laughter. No fillers, no apologies. This is stand-up as it's meant to be.</p>
                 </div>
                 <div class="image-content">
-                    <!-- Replace with a dynamic, high-energy photo of a comedian on your stage -->
-                    <img src="https://placehold.co/600x450/111/fff?text=RAW+ENERGY" alt="A comedian performing live at Warsaw Stand-Up">
+                    <!-- Replaced with the provided image -->
+                    <img src="https://content.googleapis.com/v1/files/uploaded:zdjecie%20do%20strony%20warsaw%20stand-up.jpg-e6fd760a-bae0-42e1-a86a-e77577004e1b" alt="Comedian on stage with microphone, performing stand-up comedy">
                 </div>
             </div>
         </div>
@@ -189,7 +196,7 @@
 
 
     <!-- =================================================== -->
-    <!--               2. ABOUT OUR COOPERATION              -->
+    <!--           2. ABOUT OUR COOPERATION                  -->
     <!-- =================================================== -->
     <section id="cooperation" class="cc-section">
         <div class="container">
@@ -205,7 +212,7 @@
 
 
     <!-- =================================================== -->
-    <!--                     3. CONTACT                      -->
+    <!--                   3. CONTACT                        -->
     <!-- =================================================== -->
     <section id="contact-us" class="cc-section">
         <div class="container">
@@ -217,7 +224,11 @@
                 </div>
                 <div class="contact-item">
                     <strong>Call Us:</strong>
-                    <a href="tel:+48123456789">+48 123 456 789</a>
+                    <a href="tel:+48503659944">+48 503 65 99 44</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Company Details:</strong>
+                    <span class="company-details-text">Warsaw Stand-up, a Betelgeza Group sp. z o.o. company<br> NIP 5253048962 KRS 0001176924<br> Krasinskiego 33, Warsaw</span>
                 </div>
                 <div class="social-links-contact">
                     <a href="https://www.facebook.com/warsawstandup" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -230,3 +241,4 @@
 
 </body>
 </html>
+
